@@ -3,7 +3,7 @@ function copyDir(src, dest)
     const fs = require('fs');
     const path = require('path');
     
-    fs.rm(path.join(__dirname,dest),{ recursive: true}, (err) => {
+    fs.rm(path.join(__dirname,dest),{force: true, recursive: true}, (err) => {
         if (err) {
             console.log(err);
         }
